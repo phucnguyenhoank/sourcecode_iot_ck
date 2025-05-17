@@ -1,2 +1,0 @@
-ninja: Entering directory `D:\Workspace\Android\AndroidProject\IOT\KN\traffic_sign_iot\opencv\.cxx\Debug\1b00386p\x86_64'
-ninja: no work to do.

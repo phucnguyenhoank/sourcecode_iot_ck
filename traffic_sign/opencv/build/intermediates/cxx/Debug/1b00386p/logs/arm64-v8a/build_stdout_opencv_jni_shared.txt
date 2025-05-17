@@ -1,2 +1,0 @@
-ninja: Entering directory `D:\Adr\traffic_sign\opencv\.cxx\Debug\1b00386p\arm64-v8a'
-ninja: no work to do.
