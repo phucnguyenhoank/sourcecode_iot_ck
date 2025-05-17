@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <Button
+        android:id="@+id/btnLeft1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        android:text="Left" />
+
+    <Button
+        android:id="@+id/right_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right" />
+
+    <Button
+        android:id="@+id/btnStop1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/yawTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yawTextView" />
+
+    <TextView
+        android:id="@+id/deltaYawTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="deltaYawTextView" />
+
+</LinearLayout>

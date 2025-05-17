@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="12dp"
+    tools:context=".HumanControlActivity">
+
+    <!-- Left Side: Forward and Reverse Buttons (Left Hand) -->
+    <LinearLayout
+        android:id="@+id/leftControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mapControls"
+        app:layout_constraintVertical_bias="0.3">
+
+        <Button
+            android:id="@+id/btnForward"
+            style="@style/ControlButton"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="Forward"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnReverse"
+            style="@style/ControlButton"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="Reverse" />
+    </LinearLayout>
+
+    <!-- Center: Speed Controls (SeekBars for Motor A and B) -->
+    <LinearLayout
+        android:id="@+id/speedControls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintStart_toEndOf="@+id/leftControls"
+        app:layout_constraintEnd_toStartOf="@+id/rightControls"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mapControls"
+        app:layout_constraintVertical_bias="0.3"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tốc độ động cơ A"
+            android:textSize="14sp"
+            android:textColor="#212121"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <SeekBar
+                android:id="@+id/seekBarA"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:thumbTint="#1976D2"
+                android:progressTint="#1976D2" />
+
+            <TextView
+                android:id="@+id/speedAValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:textSize="14sp"
+                android:textColor="#1976D2"
+                android:layout_marginStart="6dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tốc độ động cơ B"
+            android:textSize="14sp"
+            android:textColor="#212121"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <SeekBar
+                android:id="@+id/seekBarB"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:thumbTint="#1976D2"
+                android:progressTint="#1976D2" />
+
+            <TextView
+                android:id="@+id/speedBValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:textSize="14sp"
+                android:textColor="#1976D2"
+                android:layout_marginStart="6dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnStop"
+            style="@style/ControlButton"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="Stop"
+            android:backgroundTint="#D32F2F" />
+    </LinearLayout>
+
+    <!-- Right Side: Left and Right Buttons (Right Hand) -->
+    <LinearLayout
+        android:id="@+id/rightControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mapControls"
+        app:layout_constraintVertical_bias="0.3">
+
+        <Button
+            android:id="@+id/btnLeft"
+            style="@style/ControlButton"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="Left"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnRight"
+            style="@style/ControlButton"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="Right" />
+    </LinearLayout>
+
+    <!-- Map Controls: StartMap Button and URL Display -->
+    <LinearLayout
+        android:id="@+id/mapControls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnStartMap"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Bắt đầu ghi lộ trình"
+            android:backgroundTint="#388E3C"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/ipDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Truy cập: Chưa khởi động"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="#E8ECEF"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
